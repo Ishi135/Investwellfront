@@ -3,7 +3,7 @@
     margin-top: 20vh;
     background-color: #d2d3c89a;
     width: fit-content;
-    margin-left: 50hv;
+    margin-left: 70vh;
 
     @media screen and (max-width: 420px) {
         margin-top: 10vh;
@@ -155,7 +155,7 @@
 }
 
 .showBtn{
-    margin-top: 8vh;
+    margin-top: 7vh;
     margin-left: 90vh;
     padding: 10px;
     margin-bottom: 20px;
@@ -164,5 +164,84 @@
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;   
+    transition: background-color 0.3s, box-shadow 0.3s;
+    
+    &:hover {
+        background-color: rgb(31, 31, 142);
+    }
 }
+
+.navbar {
+    .Icon {
+      width: 4vw;
+      height: 6vh;
+    }
+  
+    .navList {
+      position: fixed;
+      background-color: rgb(235, 233, 233);
+      width: 12vw;
+      height: fit-content;
+      padding-top: 3vh;
+      list-style: none;
+      transform: translateY(-150%);
+      transition: transform 0.2s ease;
+  
+      .navItem {
+        padding-bottom: 50px;
+        font-weight: bold;
+      }
+  
+      .navLink {
+        font-size: 3vh;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  
+    .navList.show {
+      transform: translateX(0);
+    }
+    .logout{
+        margin-left: 91%;
+        margin-right: 0;
+        width: 4vw;
+        height: 6vh;
+    }
+}
+
+.policyTab {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: rgb(235, 233, 233);
+    border: 2px solid black;
+
+    .policyCap {
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 20px;
+      }
+      .policyData {
+        padding: 8px;
+        font-size: large;
+        text-align: center;
+      }
+      .policyBtn {
+        background-color: blue; 
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(31, 31, 142); 
+          }
+      }
+      
+  }

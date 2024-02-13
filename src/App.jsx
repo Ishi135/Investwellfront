@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Main from './uiCollections/Home/home';
 import LogIn from './uiCollections/Login/index';
 import SignUp from './uiCollections/Signup/index';
+import PolicyDocs from './uiCollections/policy_docs/table';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path='/' element={<LogIn/>}></Route>
           <Route path='/signup' element={<SignUp/>}></Route>
           <Route path='/home' element={<Main/>}></Route>
+          <Route path='/policydoc' element={<PolicyDocs/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
@@ -19,34 +21,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
