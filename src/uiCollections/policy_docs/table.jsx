@@ -17,23 +17,21 @@ const PolicyDocs = () => {
         fetchData(); 
     }, []); 
 
-    function remove(str,word){
-        const ind = str.indexOf(word);
-        if(ind !== -1){
-            return str.substring(ind + word.length);
+
+    const openPdf = async () => {
+        try {
+            const response = await axios.get('http://localhost:8000/getpolicyData' , { responseType: 'blob' });
+            console.log(response);
+            console.log("Hey");
+            const blob = new Blob([response.data] , { type: 'application/pdf' });
+            console.log(response.data);
+            const pdf = URL.createObjectURL(blob);
+            console.log(pdf);
+            window.open(pdf, '_blank');
+        } catch (error) {
+          console.error('Error fetching PDF:', error);
         }
-        return str;
-    }
-
-    const openPdf = async() => {
-        const response = await axios.get('http://localhost:8000/getpolicyData')
-        console.log(response.data.result);
-        const PDFpath = response.data.result;
-
-        const str = remove(PDFpath, 'public');
-        console.log(str);
-        window.open(str,'_blank'); 
-    };
+      };
 
     return (
         <>
